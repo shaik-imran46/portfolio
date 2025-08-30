@@ -23,16 +23,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50">
-      <div className="container max-w-7xl mx-auto px-4">
+    <nav className="fixed z-50 w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm">
+      <div className="container px-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold text-primary">
-            Devfolio&trade;
+            PORTFOLIO
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="items-center hidden space-x-8 md:flex">
             {menuItems.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -53,7 +53,7 @@ const Navbar = () => {
             {/* Theme Button (after Contact) */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-200"
+              className="p-2 text-gray-700 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-200"
             >
               {theme === "dark" ? (
                 <SunIcon className="w-5 h-5" />
@@ -66,7 +66,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden p-2 text-gray-700 dark:text-gray-200"
+            className="p-2 text-gray-700 md:hidden dark:text-gray-200"
           >
             {isMobileMenuOpen ? "✖" : "☰"}
           </button>
@@ -75,7 +75,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <>
-            <div className="md:hidden mt-2 space-y-2">
+            <div className="mt-2 space-y-2 md:hidden">
               {menuItems.map((item) => {
                 const isActive = pathname === item.href;
                 return (
@@ -96,18 +96,18 @@ const Navbar = () => {
               {/* Theme Button for Mobile */}
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-200"
+                className="p-2 text-gray-700 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-200"
               >
                 {theme === "dark" ? (
-                  <SunIcon className="w-5 h-5 inline" />
+                  <SunIcon className="inline w-5 h-5" />
                 ) : (
-                  <MoonIcon className="w-5 h-5 inline" />
+                  <MoonIcon className="inline w-5 h-5" />
                 )}
               </button>
             </div>
 
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+              className="p-2 transition-colors rounded-lg cursor-pointer md:hidden hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               {isMobileMenuOpen ? (
                 <XMarkIcon className="w-6 h-6" />
