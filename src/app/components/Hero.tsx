@@ -38,7 +38,7 @@ export default function Hero() {
               {...fadeIn}
               transition={{ delay: 0.8 }}
             >
-              John Doe
+              IMRAN SAKI
             </motion.span>
           </motion.h1>
 
