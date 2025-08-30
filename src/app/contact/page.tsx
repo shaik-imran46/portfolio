@@ -18,7 +18,6 @@ const Contact: React.FC = () => {
     message: "",
   });
 
-  // Update form state
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -26,7 +25,7 @@ const Contact: React.FC = () => {
     });
   };
 
-  // Open default mail client
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { name, email, subject, message } = formData;
@@ -41,15 +40,14 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="container max-w-7xl mx-auto py-20">
-      <h1 className="text-4xl font-bold text-center mb-8">Contact Me</h1>
+    <div className="container py-20 mx-auto max-w-7xl">
+      <h1 className="mb-8 text-4xl font-bold text-center">Contact Me</h1>
 
-      {/* Contact Form */}
+    
       <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-6">
-        {/* Horizontal Inputs */}
         <div className="flex flex-wrap justify-center gap-6">
           <div className="flex flex-col">
-            <label htmlFor="name" className="text-sm font-medium mb-1 text-center">
+            <label htmlFor="name" className="mb-1 text-sm font-medium text-center">
               Name
             </label>
             <input
@@ -58,13 +56,13 @@ const Contact: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              className="px-3 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
+              className="px-3 py-2 bg-white border border-gray-300 rounded-md dark:border-gray-700 dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
               required
             />
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="email" className="text-sm font-medium mb-1 text-center">
+            <label htmlFor="email" className="mb-1 text-sm font-medium text-center">
               Email
             </label>
             <input
@@ -73,13 +71,13 @@ const Contact: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className="px-3 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
+              className="px-3 py-2 bg-white border border-gray-300 rounded-md dark:border-gray-700 dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
               required
             />
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="subject" className="text-sm font-medium mb-1 text-center">
+            <label htmlFor="subject" className="mb-1 text-sm font-medium text-center">
               Subject
             </label>
             <input
@@ -88,15 +86,15 @@ const Contact: React.FC = () => {
               value={formData.subject}
               onChange={handleChange}
               placeholder="Enter subject"
-              className="px-3 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
+              className="px-3 py-2 bg-white border border-gray-300 rounded-md dark:border-gray-700 dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
               required
             />
           </div>
         </div>
 
-        {/* Message */}
+   
         <div>
-          <label htmlFor="message" className="block text-sm font-medium mb-2">
+          <label htmlFor="message" className="block mb-2 text-sm font-medium">
             Message
           </label>
           <textarea
@@ -104,20 +102,19 @@ const Contact: React.FC = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder="Enter your message"
-            className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
+            className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md dark:border-gray-700 dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
             required
           ></textarea>
         </div>
 
-        {/* Stylish Submit Button */}
         <button
           type="submit"
-          className="w-full mt-2 px-6 py-2 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition duration-300"
+          className="w-full px-6 py-2 mt-2 font-semibold transition duration-300 border-2 rounded-lg border-primary text-primary hover:bg-primary hover:text-white"
         >
           Submit
         </button>
 
-        {/* Contact Info under Submit */}
+      
         <div className="mt-8 space-y-8">
           <div className="flex items-center gap-4">
             <FaEnvelope className="w-6 h-6 text-primary" />

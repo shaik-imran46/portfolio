@@ -26,12 +26,11 @@ const Navbar = () => {
     <nav className="fixed z-50 w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm">
       <div className="container px-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          
           <Link href="/" className="text-xl font-bold text-primary">
             PORTFOLIO
           </Link>
 
-          {/* Desktop Menu */}
           <div className="items-center hidden space-x-8 md:flex">
             {menuItems.map((item) => {
               const isActive = pathname === item.href;
@@ -50,7 +49,7 @@ const Navbar = () => {
               );
             })}
 
-            {/* Theme Button (after Contact) */}
+         
             <button
               onClick={toggleTheme}
               className="p-2 text-gray-700 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-200"
@@ -63,7 +62,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+      
           <button
             onClick={toggleMobileMenu}
             className="p-2 text-gray-700 md:hidden dark:text-gray-200"
@@ -72,7 +71,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+       
         {isMobileMenuOpen && (
           <>
             <div className="mt-2 space-y-2 md:hidden">
@@ -93,7 +92,7 @@ const Navbar = () => {
                 );
               })}
 
-              {/* Theme Button for Mobile */}
+    
               <button
                 onClick={toggleTheme}
                 className="p-2 text-gray-700 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-200"

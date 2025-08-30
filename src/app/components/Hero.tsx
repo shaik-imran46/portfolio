@@ -11,7 +11,7 @@ export default function Hero() {
     <section className="py-28">
       <div className="container px-4 mx-auto max-w-7xl">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Profile Image */}
+        
           <motion.div
             className="flex items-center justify-center mb-4"
             {...scaleIn}
@@ -26,7 +26,7 @@ export default function Hero() {
             />
           </motion.div>
 
-          {/* Heading */}
+          
           <motion.h1
             className="mb-6 text-4xl font-bold md:text-6xl"
             {...fadeInUp}
@@ -42,7 +42,6 @@ export default function Hero() {
             </motion.span>
           </motion.h1>
 
-          {/* Subtitle */}
           <motion.p
             className="mb-8 text-xl text-gray-600 md:text-2xl dark:text-gray-300"
             {...fadeInUp}
@@ -51,7 +50,7 @@ export default function Hero() {
             Full Stack Developer | DJANGO DEVELOPER | CURRENTLY LEARNING PYTHON WITH DSA
           </motion.p>
 
-          {/* Social Links */}
+       
           <motion.div
             className="flex justify-center mb-8 space-x-4"
             {...fadeInUp}
@@ -89,7 +88,6 @@ export default function Hero() {
             </motion.a>
           </motion.div>
 
-          {/* Buttons */}
           <motion.div
             className="flex flex-col justify-center gap-4 md:flex-row"
             {...fadeInUp}

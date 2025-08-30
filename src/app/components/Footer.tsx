@@ -3,14 +3,14 @@ import { FaGithub, FaTwitter, FaLinkedin, FaInstagram, FaGlobe } from 'react-ico
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-dark border-t border-gray-200 dark:border-gray-800">
-      <div className="container max-w-7xl mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+    <footer className="bg-white border-t border-gray-200 dark:bg-dark dark:border-gray-800">
+      <div className="container px-4 py-8 mx-auto max-w-7xl">
+        <div className="flex flex-col items-center justify-between md:flex-row">
           <div className="mb-4 md:mb-0">
             <Link href="/" className="text-xl font-bold text-primary">
               Devfolio&trade;
             </Link>
-            <p className="text-sm text-secondary mt-2">
+            <p className="mt-2 text-sm text-secondary">
               © {new Date().getFullYear()} Devfolio. All rights reserved.
             </p>
           </div>
@@ -20,42 +20,42 @@ export default function Footer() {
               href="https://github.com/shaik-imran46"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary hover:text-primary transition-colors"
+              className="transition-colors text-secondary hover:text-primary"
             >
-              <FaGithub className="h-6 w-6" />
+              <FaGithub className="w-6 h-6" />
             </a>
             <a
               href="https://x.com/ImranSaki178689?t=-fZzNspmRKTJR3ZFLLD4dA&s=09"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary hover:text-primary transition-colors"
+              className="transition-colors text-secondary hover:text-primary"
             >
-              <FaTwitter className="h-6 w-6" />
+              <FaTwitter className="w-6 h-6" />
             </a>
             <a
               href="https://www.linkedin.com/in/imran-saki-1b2988301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary hover:text-primary transition-colors"
+              className="transition-colors text-secondary hover:text-primary"
             >
-              <FaLinkedin className="h-6 w-6" />
+              <FaLinkedin className="w-6 h-6" />
             </a>
             <a
-              href="c:\Users\ADMIN\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\5EF698CD9FE650923EA331C15AF3B160\WhatsApp Image 2025-08-27 at 19.27.26_f640a34d.jpg"
+              href="https://www.instagram.com/mr._imran_05_?utm_source=qr&igsh=MW5oem1zZ243cjdicA=="
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary hover:text-primary transition-colors"
+              className="transition-colors text-secondary hover:text-primary"
             >
-              <FaInstagram className="h-6 w-6" />
+              <FaInstagram className="w-6 h-6" />
             </a>
           
             <a
-              href="https://portfolio.com/in/yourusername"
+              href="portfolio-eta-fawn-24.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary hover:text-primary transition-colors"
+              className="transition-colors text-secondary hover:text-primary"
             >
-              <FaGlobe className="h-6 w-6" />
+              <FaGlobe className="w-6 h-6" />
             </a>
           </div>
         </div>
